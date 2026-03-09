@@ -1,0 +1,127 @@
+/* style.css - Modern dark theme with glassmorphism */
+
+/* Root variables for colors and spacing */
+:root {
+  --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-blur: 12px;
+  --primary: #4fd1c5;
+  --secondary: #a0c4ff;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-radius: 12px;
+  --spacing: 1rem;
+  --transition: 0.3s ease;
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing);
+}
+
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.app-header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing);
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  backdrop-filter: blur(var(--card-blur));
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing);
+  padding: var(--spacing);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing);
+  text-align: center;
+  backdrop-filter: blur(var(--card-blur));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.value {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.app-footer {
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding: var(--spacing);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}

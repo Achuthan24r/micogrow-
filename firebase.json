@@ -1,0 +1,10 @@
+{
+    "hosting": {
+        "site": "coffee-spark-ai-barista-d7d8c",
+        "public": ".",
+        "ignore": [
+            "firebase.json",
+            "**/node_modules/**"
+        ]
+    }
+}

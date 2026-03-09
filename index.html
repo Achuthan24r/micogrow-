@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mushroom Farm Automation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>🍄 Mushroom Farm Dashboard</h1>
+            <button id="connectBtn" class="btn primary">Connect HC-05</button>
+        </header>
+        <main class="dashboard">
+            <section class="card" id="tempCard">
+                <h2>Temperature</h2>
+                <p class="value" id="tempValue">-- °C</p>
+            </section>
+            <section class="card" id="humCard">
+                <h2>Humidity</h2>
+                <p class="value" id="humValue">-- %</p>
+            </section>
+            <section class="card" id="sprayCard">
+                <h2>Sprayer</h2>
+                <p class="value" id="sprayStatus">--</p>
+                <button class="btn" id="sprayToggle">Toggle Spray</button>
+            </section>
+            <section class="card" id="motorCard">
+                <h2>Motor</h2>
+                <p class="value" id="motorStatus">--</p>
+                <button class="btn" id="motorToggle">Toggle Motor</button>
+            </section>
+            <section class="card" id="fanCard">
+                <h2>Fan</h2>
+                <p class="value" id="fanStatus">--</p>
+                <button class="btn" id="fanToggle">Toggle Fan</button>
+            </section>
+            <section class="card" id="diseaseCard">
+                <h2>Disease Monitor</h2>
+                <p class="value" id="colorValue"
+                    style="display:flex; align-items:center; justify-content:center; gap:8px;">
+                    <span id="colorSwatch"
+                        style="width:20px; height:20px; border-radius:50%; background:transparent; border:1px solid rgba(255,255,255,0.2); display:inline-block;"></span>
+                    <span id="colorText">--</span>
+                </p>
+                <p id="diseaseStatus" style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.5rem;">Status:
+                    Unknown</p>
+            </section>
+        </main>
+        <footer class="app-footer">
+            <p>Smart Agriculture • Real‑time Monitoring</p>
+        </footer>
+    </div>
+
+    <!-- Load Firebase (modular) from CDN -->
+    <script type="module" src="firebaseInit.js"></script>
+
+    <!-- Your app logic (also a module) -->
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

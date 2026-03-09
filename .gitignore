@@ -1,0 +1,5 @@
+node_modules/
+.firebase/
+*.zip
+*.log
+.DS_Store
