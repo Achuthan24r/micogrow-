@@ -2,14 +2,14 @@
 
 /* Root variables for colors and spacing */
 :root {
-  --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  --card-bg: rgba(255, 255, 255, 0.08);
-  --card-blur: 12px;
-  --primary: #4fd1c5;
-  --secondary: #a0c4ff;
-  --text-primary: #e0e0e0;
-  --text-secondary: #b0b0b0;
-  --border-radius: 12px;
+  --bg-gradient: linear-gradient(135deg, #0B1E12, #163E24, #215934);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-blur: 16px;
+  --primary: #4CAF50;
+  --secondary: #81C784;
+  --text-primary: #e8f5e9;
+  --text-secondary: #a5d6a7;
+  --border-radius: 16px;
   --spacing: 1rem;
   --transition: 0.3s ease;
 }
@@ -24,7 +24,8 @@
 
 body {
   min-height: 100vh;
-  background: var(--bg-gradient);
+  background: linear-gradient(rgba(11, 30, 18, 0.7), rgba(22, 62, 36, 0.7)), url('bg.png') no-repeat center center fixed;
+  background-size: cover;
   color: var(--text-primary);
   display: flex;
   justify-content: center;
@@ -124,4 +125,48 @@ body {
   .dashboard {
     grid-template-columns: 1fr;
   }
+}
+
+/* Instructions section */
+.instructions-section {
+  padding: var(--spacing);
+  background: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.instructions-section h2 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.instructions-list {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.instructions-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.instructions-list span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: var(--primary);
+  color: #0B1E12;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
